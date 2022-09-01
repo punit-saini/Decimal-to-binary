@@ -1,0 +1,15 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+  cout << "  Enter a number " << endl;
+  int num, result = 0, i = 0, store;
+  cin >> num;
+  while (num >= 1) {
+    store = num & 1;
+    result = (pow(10, i) * store) + result;
+    num = num >> 1;
+    i++;
+  }
+  cout << result << endl;
+}
